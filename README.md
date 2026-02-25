@@ -13,7 +13,7 @@
 
 <h2>التقنيات المستخدمة (Tech Stack)</h2>
 
-<ul style="line-height: 1.8;">
+<ul>
 <li><strong>HTML5</strong> (تم دراستها بعمق في المرحلة الإعدادية)</li>
 <li><strong>CSS3</strong></li>
 <li><strong>JavaScript</strong> (تم دراستها ضمن منهج المرحلة الثانوية)</li>
@@ -34,7 +34,7 @@ https://jasseramir.github.io/boslah/
 </p>
 
 <h3>2) التشغيل محليًا (Local)</h3>
-<ul style="line-height: 1.8;">
+<ul>
 <li>قم بتحميل أو فك ضغط ملفات المشروع.</li>
 <li>افتح المجلد باستخدام VS Code.</li>
 <li>شغّل ملف <code>index.html</code> عن طريق إضافة Live Server.</li>
@@ -47,7 +47,7 @@ https://jasseramir.github.io/boslah/
 
 <h2>فكرة الذكاء الاصطناعي في "بوصلة"</h2>
 
-<ol style="line-height: 1.8;">
+<ol>
 <li>تحليل درجات الطالب المدخلة.</li>
 <li>تحديد المواد التي تحتاج إلى جهد أكبر.</li>
 <li>توليد جدول مذاكرة ذكي يوزع الوقت بكفاءة لتحقيق التعلم الشخصي.</li>
