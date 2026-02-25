@@ -18,6 +18,14 @@
   --radius: 18px;
 
   --container-max: 980px;
+
+  --fs-1: 2rem;
+  --fs-2: 1.15rem;
+  --fs-3: .95rem;
+
+  --fw-1: 900;
+  --fw-2: 700;
+  --fw-3: 500;
 }
 
 * { box-sizing: border-box; padding: 0; margin: 0; }
@@ -35,6 +43,9 @@ body {
   display: flex;
   justify-content: center;
   padding: 18px;
+  font-size: var(--fs-3);
+  font-weight: var(--fw-3);
+  line-height: 1.65;
 }
 
 .container {
@@ -49,13 +60,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: .5rem;
-
   position: absolute;
   top: 32px;
   left: 50%;
   transform: translate(-50%, 0);
-
-  font-weight: 800;
+  font-size: var(--fs-1);
+  font-weight: var(--fw-1);
   letter-spacing: .2px;
   user-select: none;
 }
@@ -71,4 +81,6 @@ body {
 .subjects-container {
   display: grid;
   gap: 12px;
+  width: min(720px, 100%);
+  margin-inline: auto;
 }
