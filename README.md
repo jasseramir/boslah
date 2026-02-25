@@ -13,7 +13,7 @@
 
 <h2>التقنيات المستخدمة (Tech Stack)</h2>
 
-<ul style="line-height: 1.8;>
+<ul style="line-height: 1.8;">
 <li><strong>HTML5</strong> (تم دراستها بعمق في المرحلة الإعدادية)</li>
 <li><strong>CSS3</strong></li>
 <li><strong>JavaScript</strong> (تم دراستها ضمن منهج المرحلة الثانوية)</li>
