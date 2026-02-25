@@ -35,9 +35,9 @@ https://jasseramir.github.io/boslah/
 
 <h3>2) التشغيل محليًا (Local)</h3>
 <ul>
-<li>قم بتحميل أو فك ضغط ملفات المشروع.</li>
-<li>افتح المجلد باستخدام VS Code.</li>
-<li>شغّل ملف <code>index.html</code> عن طريق إضافة Live Server.</li>
+<li>قم بتحميل أو فك ضغط ملفات المشروع.</li><br>
+<li>افتح المجلد باستخدام VS Code.</li><br>
+<li>شغّل ملف <code>index.html</code> عن طريق إضافة Live Server.</li><br>
 <li>أو افتح <code>index.html</code> مباشرة من المتصفح.</li>
 </ul>
 
