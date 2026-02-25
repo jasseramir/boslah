@@ -14,11 +14,11 @@
 <h2>التقنيات المستخدمة (Tech Stack)</h2>
 
 <ul>
-<li><strong>HTML5</strong> (تم دراستها بعمق في المرحلة الإعدادية)</li>
-<li><strong>CSS3</strong></li>
-<li><strong>JavaScript</strong> (تم دراستها ضمن منهج المرحلة الثانوية)</li>
-<li><strong>الوسائط المستخدمة:</strong> أيقونات مخصصة + خطوط ويب + صور رمزية (Favicons)</li>
-<li><strong>التقنيات الحديثة:</strong> Progressive Web App (PWA)</li>
+<li><strong>HTML5</strong> (تم دراستها بعمق في المرحلة الإعدادية)</li><br>
+<li><strong>CSS3</strong></li><br>
+<li><strong>JavaScript</strong> (تم دراستها ضمن منهج المرحلة الثانوية)</li><br>
+<li><strong>الوسائط المستخدمة:</strong> أيقونات مخصصة + خطوط ويب + صور رمزية (Favicons)</li><br>
+<li><strong>التقنيات الحديثة:</strong> Progressive Web App (PWA)</li><br>
 <li><strong>الاستضافة:</strong> GitHub Pages</li>
 </ul>
 
@@ -48,8 +48,8 @@ https://jasseramir.github.io/boslah/
 <h2>فكرة الذكاء الاصطناعي في "بوصلة"</h2>
 
 <ol>
-<li>تحليل درجات الطالب المدخلة.</li>
-<li>تحديد المواد التي تحتاج إلى جهد أكبر.</li>
+<li>تحليل درجات الطالب المدخلة.</li><br>
+<li>تحديد المواد التي تحتاج إلى جهد أكبر.</li><br>
 <li>توليد جدول مذاكرة ذكي يوزع الوقت بكفاءة لتحقيق التعلم الشخصي.</li>
 </ol>
 
@@ -57,8 +57,7 @@ https://jasseramir.github.io/boslah/
 
 <h2>المسابقة</h2>
 <p>
-تم إعداد هذا المشروع للمشاركة في مسابقة البرمجة والذكاء الاصطناعي لعام 2026  
-مديرية التربية والتعليم بالقاهرة.
+تم إعداد هذا المشروع للمشاركة في <strong>مسابقة البرمجة والذكاء الاصطناعي لعام 2026</strong> - مديرية التربية والتعليم بالقاهرة.
 </p>
 
 </div>
