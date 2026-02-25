@@ -6,6 +6,8 @@
   border-radius: var(--radius);
   background: rgba(255,255,255,.7);
   color: var(--muted);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-3);
 }
 
 .subject-container {
@@ -25,16 +27,16 @@
 }
 
 .subject-name {
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: var(--fs-2);
+  font-weight: var(--fw-2);
   display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
 .badge {
-  font-size: .85rem;
-  font-weight: 700;
+  font-size: var(--fs-3);
+  font-weight: var(--fw-2);
   color: var(--primary-700);
   background: rgba(32, 87, 255, .10);
   border: 1px solid rgba(32, 87, 255, .18);
@@ -52,8 +54,8 @@
 .recommendations.is-visible { display: block; }
 
 .rec h4 {
-  font-size: 1rem;
-  font-weight: 900;
+  font-size: var(--fs-2);
+  font-weight: var(--fw-1);
   margin-bottom: 8px;
   color: var(--primary-700);
 }
@@ -62,6 +64,8 @@
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 10px;
+  font-size: var(--fs-3);
+  font-weight: var(--fw-3);
 }
 
 .rec-steps {
@@ -77,4 +81,6 @@
   border-radius: 14px;
   padding: 10px 12px;
   line-height: 1.8;
+  font-size: var(--fs-3);
+  font-weight: var(--fw-3);
 }
