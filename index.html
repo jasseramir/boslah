@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="بوصلة – موقع يساعدك على ترتيب أولويات المذاكرة وإنشاء جدول ذكي حسب مستواك.">
+  <meta name="theme-color" content="#2057ff">
+
+  <title>بوصلة</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96.png">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+
+  <!-- Web App -->
+  <link rel="manifest" href="assets/images/site.webmanifest">
+
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/styles/base.css">
+  <link rel="stylesheet" href="assets/styles/components.css">
+  <link rel="stylesheet" href="assets/styles/buttons.css">
+  <link rel="stylesheet" href="assets/styles/form.css">
+  <link rel="stylesheet" href="assets/styles/schedule.css">
+  <link rel="stylesheet" href="assets/styles/responsive.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title"><i class="ri-compass-3-line"></i>بوصلة</h1>
+
+    <div class="visible-content">
+      <div class="subjects-container" id="subjects"></div>
+
+      <div class="actions-row">
+        <button class="btn" id="createTable"><i class="ri-calendar-schedule-line"></i>إنشاء جدول</button>
+      </div>
+
+      <div class="schedule" id="schedule"></div>
+    </div>
+    
+    <div class="btns-container">
+      <button class="btn" id="addSubject"><i class="ri-add-line"></i>أضف مادة</button>
+      <button class="btn reset" id="reset"><i class="ri-delete-bin-6-line"></i>حذف الكل</button>
+    </div>
+    
+    <div class="form-container" id="formContainer">
+      <form class="form" id="form">
+        <div class="close-container">
+          <button type="button" id="formClose" aria-label="close"><i class="ri-close-line"></i></button>
+        </div>
+
+        <h2 class="form-title"><i class="ri-file-list-3-line"></i>أضف معلومات المادة</h2>
+
+        <div class="form-grid">
+          <div class="field">
+            <label class="label" for="subjectName">اسم المادة</label>
+            <p class="checker" id="nameChecker"></p>
+            <input type="text" name="subject-name" placeholder="اكتب اسم المادة هنا" id="subjectName">
+          </div>
+
+          <div class="field">
+            <label class="label" for="studentGrade">درجتك في آخر اختبار بالنسبة المئوية</label>
+            <p class="checker" id="gradeChecker"></p>
+            <input type="text" inputmode="numeric" name="grade" placeholder="اكتب درجتك بالنسبة المئوية هنا" id="studentGrade" maxlength="3">
+          </div>
+
+          <div class="field">
+            <label class="label" for="difficulty">صعوبة المادة</label>
+            <p class="checker" id="selectChecker"></p>
+            <div class="select-wrap">
+              <select class="difficulty" id="difficulty" name="difficulty">
+                <option value="" disabled selected>اختر صعوبة المادة في نظرك</option>
+                <option value="so-easy">1 - سهلة</option>
+                <option value="easy">2</option>
+                <option value="normal">3 - متوسطة</option>
+                <option value="hard">4</option>
+                <option value="so-hard">5 - صعبة</option>
+              </select>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="studyingHours">عدد ساعات المذاكرة في الأسبوع</label>
+            <p class="checker" id="hoursChecker"></p>
+            <div class="select-wrap">
+              <select class="studying-hours" id="studyingHours">
+                <option value="" disabled selected>اختر عدد ساعات مذاكرتك في الأسبوع</option>
+                <option value="less-than-hour">أقل من ساعة واحدة</option>
+                <option value="1-hour">ساعة واحدة</option>
+                <option value="2-hours">ساعتان</option>
+                <option value="3-hours">3 ساعات</option>
+                <option value="4-hours">4 ساعات</option>
+                <option value="5-hours">5 ساعات</option>
+                <option value="more-than-5-hours">أكثر من 5 ساعات</option>
+              </select>
+              <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="examSoon">
+            <label for="examSoon">يوجد امتحان لهذه المادة قريبًا</label>
+          </div>
+
+          <input type="submit" class="btn" id="addForm" value="إضافة">
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- Scripts -->
+  <script src="assets/scripts/state.js"></script>
+  <script src="assets/scripts/ui.js"></script>
+  <script src="assets/scripts/validation.js"></script>
+  <script src="assets/scripts/priority.js"></script>
+  <script src="assets/scripts/recommendations.js"></script>
+  <script src="assets/scripts/schedule.js"></script>
+  <script src="assets/scripts/main.js"></script>
+</body>
+</html>
