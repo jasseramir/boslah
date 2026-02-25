@@ -22,7 +22,12 @@
   .message-empty {
     width: min(520px, 100%);
     padding: 22px 18px;
-    font-size: 1.05rem;
+    font-size: var(--fs-2);
     border-style: dashed;
+  }
+
+  .subjects-container,
+  .schedule {
+    width: min(760px, 100%);
   }
 }
