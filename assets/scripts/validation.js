@@ -14,12 +14,12 @@ function checkData() {
     const cleanedName = subjectName.value.trim();
 
     if (!cleanedName) {
-        nameChecker.textContent = 'يرجى ملئ البيانات المطلوبة';
+        nameChecker.textContent = 'يرجى ملء البيانات المطلوبة';
         isValid = false;
     }
 
     if (!studentGrade.value) {
-        gradeChecker.textContent = 'يرجى ملئ البيانات المطلوبة';
+        gradeChecker.textContent = 'يرجى ملء البيانات المطلوبة';
         isValid = false;
     } else if (Number(studentGrade.value) < 0 || Number(studentGrade.value) > 100) {
         gradeChecker.textContent = 'البيانات غير صحيحة';
