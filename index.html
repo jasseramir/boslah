@@ -44,7 +44,6 @@
   <link rel="stylesheet" href="assets/styles/schedule.css">
   <link rel="stylesheet" href="assets/styles/responsive.css">
 </head>
-
 <body>
   <main class="container">
     <h1 class="title"><i class="ri-compass-3-line"></i>بوصلة</h1>
@@ -75,19 +74,18 @@
         <div class="form-grid">
           <div class="field">
             <label class="label" for="subjectName">اسم المادة</label>
-            <p class="checker" id="nameChecker"></p>
             <input type="text" name="subject-name" placeholder="اكتب اسم المادة هنا" id="subjectName">
+            <p class="checker" id="nameChecker"></p>
           </div>
 
           <div class="field">
             <label class="label" for="studentGrade">درجتك في آخر اختبار بالنسبة المئوية</label>
-            <p class="checker" id="gradeChecker"></p>
             <input type="text" inputmode="numeric" name="grade" placeholder="اكتب درجتك بالنسبة المئوية هنا" id="studentGrade" maxlength="3">
+            <p class="checker" id="gradeChecker"></p>
           </div>
 
           <div class="field">
             <label class="label" for="difficulty">صعوبة المادة</label>
-            <p class="checker" id="selectChecker"></p>
             <div class="select-wrap">
               <select class="difficulty" id="difficulty" name="difficulty">
                 <option value="" disabled selected>اختر صعوبة المادة في نظرك</option>
@@ -99,11 +97,11 @@
               </select>
               <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
             </div>
+            <p class="checker" id="selectChecker"></p>
           </div>
 
           <div class="field">
             <label class="label" for="studyingHours">عدد ساعات المذاكرة في الأسبوع</label>
-            <p class="checker" id="hoursChecker"></p>
             <div class="select-wrap">
               <select class="studying-hours" id="studyingHours">
                 <option value="" disabled selected>اختر عدد ساعات مذاكرتك في الأسبوع</option>
@@ -117,6 +115,7 @@
               </select>
               <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
             </div>
+            <p class="checker" id="hoursChecker"></p>
           </div>
 
           <div class="checkbox-row">
