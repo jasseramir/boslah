@@ -6,9 +6,9 @@
 ---
 
 ## التقنيات المستخدمة (Tech Stack)
-* **اللغات:** `#HTML5` `#CSS3` `#JavaScript`
-* **التقنيات الحديثة:** `#PWA` (Progressive Web App)
-* **الاستضافة:** `#GitHub_Pages`
+* **اللغات:** `HTML5` `CSS3` `JavaScript`
+* **التقنيات الحديثة:** `PWA` (Progressive Web App)
+* **الاستضافة:** `GitHub_Pages`
 
 ---
 
