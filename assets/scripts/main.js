@@ -82,7 +82,15 @@ formContainer.addEventListener('click', (e) => {
 });
 
 studentGrade.addEventListener('input', () => {
-    studentGrade.value = studentGrade.value.replace(/[^0-9]/g, '');
+    let v = studentGrade.value.replace(/[^0-9.]/g, '');
+    if (v.startsWith('.')) v = '0' + v;
+
+    const firstDot = v.indexOf('.');
+    if (firstDot !== -1) {
+        v = v.slice(0, firstDot + 1) + v.slice(firstDot + 1).replace(/\./g, '');
+    }
+
+    studentGrade.value = v;
 });
 
 if (createTable) {
@@ -100,17 +108,4 @@ form.addEventListener('submit', (e) => {
     if (scheduleVisible) renderSchedule();
     form.reset();
     formContainer.classList.remove('is-open');
-});
-
-confirmOk?.addEventListener('click', () => closeConfirm(true));
-confirmCancel?.addEventListener('click', () => closeConfirm(false));
-confirmClose?.addEventListener('click', () => closeConfirm(false));
-
-confirmModal?.addEventListener('click', (e) => {
-    if (e.target === confirmModal) closeConfirm(false);
-});
-
-document.addEventListener('keydown', (e) => {
-    if (!confirmModal?.classList.contains('is-open')) return;
-    if (e.key === 'Escape') closeConfirm(false);
 });
