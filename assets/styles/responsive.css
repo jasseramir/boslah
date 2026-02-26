@@ -30,4 +30,6 @@
   .schedule {
     width: min(760px, 100%);
   }
+
+  .modal { width: 480px; }
 }
