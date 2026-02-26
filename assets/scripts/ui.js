@@ -73,3 +73,41 @@ function saveData() {
 
     idCounter++;
 }
+
+/* Fancy Confirm Modal */
+
+let _confirmResolver = null;
+
+function closeConfirm(result) {
+    if (!confirmModal) return;
+
+    confirmModal.classList.remove('is-open');
+    confirmModal.setAttribute('aria-hidden', 'true');
+
+    if (_confirmResolver) _confirmResolver(result);
+    _confirmResolver = null;
+}
+
+function openConfirm({ title = 'تأكيد', message = 'هل أنت متأكد؟', okText = 'حذف', danger = true } = {}) {
+    return new Promise((resolve) => {
+        if (!confirmModal) return resolve(false);
+
+        _confirmResolver = resolve;
+
+        if (confirmTitle) confirmTitle.textContent = title;
+        if (confirmMsg) confirmMsg.textContent = message;
+
+        if (confirmOk) {
+            confirmOk.innerHTML = danger
+                ? `<i class="ri-delete-bin-6-line"></i>${okText}`
+                : okText;
+
+            confirmOk.classList.toggle('danger', !!danger);
+        }
+
+        confirmModal.classList.add('is-open');
+        confirmModal.setAttribute('aria-hidden', 'false');
+
+        setTimeout(() => confirmOk?.focus?.(), 0);
+    });
+}
