@@ -2,13 +2,26 @@ renderPage();
 updateCreateBtn();
 clearSchedule();
 
-output.addEventListener('click', (e) => {
+output.addEventListener('click', async (e) => {
     const deleteBtn = e.target.closest('.delete');
     const showBtn = e.target.closest('.show-recommendation');
 
     if (deleteBtn) {
         const id = Number(deleteBtn.dataset.id);
+        const subject = subjects.find(s => s.id === id);
+        if (!subject) return;
+
+        const ok = await openConfirm({
+            title: 'تأكيد الحذف',
+            message: `هل أنت متأكد من حذف مادة "${subject.subjectName}"؟`,
+            okText: 'حذف',
+            danger: true
+        });
+
+        if (!ok) return;
+
         subjects = subjects.filter(subject => subject.id !== id);
+
         calculatePriority();
         renderPage();
         saveInfo();
@@ -36,7 +49,16 @@ addSubject.addEventListener('click', () => {
     formContainer.classList.add('is-open');
 });
 
-reset.addEventListener('click', () => {
+reset.addEventListener('click', async () => {
+    const ok = await openConfirm({
+        title: 'تأكيد حذف الكل',
+        message: 'هل أنت متأكد من حذف كل المواد؟',
+        okText: 'حذف الكل',
+        danger: true
+    });
+
+    if (!ok) return;
+
     subjects = [];
     idCounter = 0;
     renderPage();
@@ -78,4 +100,17 @@ form.addEventListener('submit', (e) => {
     if (scheduleVisible) renderSchedule();
     form.reset();
     formContainer.classList.remove('is-open');
+});
+
+confirmOk?.addEventListener('click', () => closeConfirm(true));
+confirmCancel?.addEventListener('click', () => closeConfirm(false));
+confirmClose?.addEventListener('click', () => closeConfirm(false));
+
+confirmModal?.addEventListener('click', (e) => {
+    if (e.target === confirmModal) closeConfirm(false);
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!confirmModal?.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeConfirm(false);
 });
