@@ -129,6 +129,27 @@
     </div>
   </main>
   
+  <!-- Confirm Modal -->
+  <div class="modal-container" id="confirmModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmMsg">
+      <div class="modal-head">
+        <h3 id="confirmTitle" class="modal-title">تأكيد الحذف</h3>
+        <button type="button" class="modal-close" id="confirmClose" aria-label="close">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <p id="confirmMsg" class="modal-msg">هل أنت متأكد؟</p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn ghost" id="confirmCancel">إلغاء</button>
+        <button type="button" class="btn danger" id="confirmOk">
+          <i class="ri-delete-bin-6-line"></i>حذف
+        </button>
+      </div>
+    </div>
+  </div>
+  
   <!-- Scripts -->
   <script src="assets/scripts/state.js"></script>
   <script src="assets/scripts/ui.js"></script>
