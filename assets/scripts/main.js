@@ -20,7 +20,7 @@ output.addEventListener('click', async (e) => {
 
         if (!ok) return;
 
-        subjects = subjects.filter(subject => subject.id !== id);
+        subjects = subjects.filter(s => s.id !== id);
 
         calculatePriority();
         renderPage();
@@ -82,7 +82,10 @@ formContainer.addEventListener('click', (e) => {
 });
 
 studentGrade.addEventListener('input', () => {
-    studentGrade.value = studentGrade.value.replace(/[^0-9]/g, '');
+    studentGrade.value = studentGrade.value
+        .replace(/[٫,]/g, '.')
+        .replace(/[^0-9.]/g, '')
+        .replace(/(\..*)\./g, '$1');
 });
 
 if (createTable) {
@@ -104,7 +107,6 @@ form.addEventListener('submit', (e) => {
 
 confirmOk?.addEventListener('click', () => closeConfirm(true));
 confirmCancel?.addEventListener('click', () => closeConfirm(false));
-confirmClose?.addEventListener('click', () => closeConfirm(false));
 
 confirmModal?.addEventListener('click', (e) => {
     if (e.target === confirmModal) closeConfirm(false);
