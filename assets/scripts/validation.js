@@ -21,7 +21,7 @@ function checkData() {
     if (!studentGrade.value) {
         gradeChecker.textContent = 'يرجى ملء البيانات المطلوبة';
         isValid = false;
-    } else if (Number(studentGrade.value) < 0 || Number(studentGrade.value) > 100) {
+    } else if (Number(studentGrade.value.replace(/[٫,]/g, '.')) < 0 || Number(studentGrade.value.replace(/[٫,]/g, '.')) > 100) {
         gradeChecker.textContent = 'البيانات غير صحيحة';
         isValid = false;
     }
@@ -44,8 +44,8 @@ function checkData() {
         if ((savedName ?? '').trim().toLowerCase() === currentName) sameCount++;
     }
 
-    if (sameCount >= 2) {
-        nameChecker.textContent = 'لا يمكن إضافة هذه المادة أكثر من مرتين';
+    if (sameCount >= 1) {
+        nameChecker.textContent = 'لا يمكن إضافة نفس المادة أكثر من مرة';
         isValid = false;
     }
 
