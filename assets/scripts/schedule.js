@@ -228,7 +228,6 @@ function renderSchedule() {
   scheduleBox.innerHTML = `
     <div class="schedule-header">
       <div class="schedule-title"><i class="ri-calendar-2-line"></i>الجدول</div>
-      <div class="schedule-meta">${daysCount} أيام • ${perDay} مواد/اليوم</div>
     </div>
 
     <table class="schedule-table">
