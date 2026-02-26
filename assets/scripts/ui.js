@@ -64,7 +64,7 @@ function saveInfo() {
 function saveData() {
     subjects.push({
         subjectName: subjectName.value.trim(),
-        studentGrade: Number(studentGrade.value),
+        studentGrade: Number(studentGrade.value.replace(/[٫,]/g, '.')),
         difficulty: difficulty.value,
         studyingHours: studyingHours.value,
         examSoon: examSoon.checked ? true : false,
