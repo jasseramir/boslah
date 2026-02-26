@@ -38,12 +38,6 @@
   gap: 8px;
 }
 
-.schedule-meta {
-  color: var(--muted);
-  font-weight: var(--fw-3);
-  font-size: var(--fs-3);
-}
-
 .schedule-table {
   width: 100%;
   border-collapse: collapse;
