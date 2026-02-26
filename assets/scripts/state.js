@@ -8,7 +8,13 @@ const addSubject = document.getElementById('addSubject'),
       examSoon = document.getElementById('examSoon'),
       addForm = document.getElementById('addForm'),
       reset = document.getElementById('reset'),
-      formClose = document.getElementById('formClose');
+      formClose = document.getElementById('formClose'),
+      confirmModal = document.getElementById('confirmModal'),
+      confirmTitle = document.getElementById('confirmTitle'),
+      confirmMsg = document.getElementById('confirmMsg'),
+      confirmOk = document.getElementById('confirmOk'),
+      confirmCancel = document.getElementById('confirmCancel'),
+      confirmClose = document.getElementById('confirmClose');
 
 const createTable = document.getElementById('createTable');
 const scheduleBox = document.getElementById('schedule');
