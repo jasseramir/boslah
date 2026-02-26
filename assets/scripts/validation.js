@@ -21,9 +21,12 @@ function checkData() {
     if (!studentGrade.value) {
         gradeChecker.textContent = 'يرجى ملء البيانات المطلوبة';
         isValid = false;
-    } else if (Number(studentGrade.value) < 0 || Number(studentGrade.value) > 100) {
-        gradeChecker.textContent = 'البيانات غير صحيحة';
-        isValid = false;
+    } else {
+        const gradeNum = Number(studentGrade.value);
+        if (!Number.isFinite(gradeNum) || gradeNum < 0 || gradeNum > 100) {
+            gradeChecker.textContent = 'البيانات غير صحيحة';
+            isValid = false;
+        }
     }
 
     if (!difficulty.value) {
@@ -32,20 +35,7 @@ function checkData() {
     }
 
     if (!studyingHours.value) {
-        hoursChecker.textContent = 'يرجى اختيار عدد ساعات مذاكرتك في الأسبوع';
-        isValid = false;
-    }
-
-    const currentName = cleanedName.toLowerCase();
-    let sameCount = 0;
-
-    for (let i = 0; i < subjects.length; i++) {
-        const { subjectName: savedName } = subjects[i];
-        if ((savedName ?? '').trim().toLowerCase() === currentName) sameCount++;
-    }
-
-    if (sameCount >= 2) {
-        nameChecker.textContent = 'لا يمكن إضافة هذه المادة أكثر من مرتين';
+        hoursChecker.textContent = 'يرجى اختيار عدد ساعات مذاكرتك';
         isValid = false;
     }
 
